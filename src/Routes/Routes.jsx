@@ -11,33 +11,37 @@ import ReadList from '../components/pages/ReadList/ReadList';
 export const router = createBrowserRouter([
   {
     path: "/",
-   Component:Root,
-   errorElement:<Error></Error>,
-   children:[{
+    Component: Root,
 
-    index:true,
-    loader:()=>fetch('/public/booksData.json'),
-    path:"/Home",
-    Component:Home
-   },
-   {
-    path:'/about',
-    Component:About
-   },
-   {
-    path:'readlist',
-     loader:()=>fetch('/public/booksData.json'),
-    Component:ReadList
-   },
-   {
-    path:'/bookDetails/:id',
-     loader:()=>fetch('/public/booksData.json'),
-    Component:BookDetails
-   }
+    children: [{
+
+      index: true,
+      loader: () => fetch('/public/booksData.json'),
+      path: "/",
+      Component: Home
+    },
+    {
+      path: "*",
+      errorElement: <Error></Error>,
+    },
+    {
+      path: '/about',
+      Component: About
+    },
+    {
+      path: 'readlist',
+      loader: () => fetch('/public/booksData.json'),
+      Component: ReadList
+    },
+    {
+      path: '/bookDetails/:id',
+      loader: () => fetch('/public/booksData.json'),
+      Component: BookDetails
+    }
 
 
-   ]
-    
+    ]
+
 
 
   },
