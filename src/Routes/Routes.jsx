@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBrowserRouter } from "react-router";
 import Root from '../components/pages/Root/Root';
-// import Error from '../components/pages/Errorpage/Error';
+import Error from '../components/pages/Errorpage/Error';
 import Home from '../components/pages/Home/Home';
 import About from '../components/pages/About/About';
 import BookDetails from '../components/pages/BookDetails/BookDetails';
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
   {
     path: "",
    Component:Root,
-  //  errorElement:<Error></Error>,
+   errorElement:<Error></Error>,
    children:[{
 
     index:true,
