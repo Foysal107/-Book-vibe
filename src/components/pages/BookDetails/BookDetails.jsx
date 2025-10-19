@@ -50,7 +50,7 @@ addToStoredDB(id)
       <h2 className='flex gap-7 text-green-300 m-3'>
         <span className='text-blue-400'>Tag</span>
          {
-        tags.map(tags=><button>{tags}</button>)
+        tags?.map(tags=><button>{tags}</button>)
     }
         </h2> 
         <h1 className='border-1'></h1>
