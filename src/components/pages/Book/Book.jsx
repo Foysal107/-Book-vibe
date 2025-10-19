@@ -29,7 +29,7 @@ bookId,
   <div className="card-body">
    <div className='flex justify-center gap-5'>
      {
-        tags.map(tags=><button>{tags}</button>)
+        tags?.map(tags=><button>{tags}</button>)
     }
    </div>
     <h2 className="card-title">
