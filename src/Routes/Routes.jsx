@@ -10,7 +10,7 @@ import ReadList from '../components/pages/ReadList/ReadList';
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
    Component:Root,
    errorElement:<Error></Error>,
    children:[{
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
     index:true,
     loader:()=>fetch('/public/booksData.json'),
     path:"/",
-    Component:Home,
+    Component:Home
    },
    {
     path:'/about',
